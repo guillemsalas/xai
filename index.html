@@ -60,6 +60,15 @@ $(function(){
 		setTimeout(change_color,500);
 	}
 	change_color();
+	var sizes = [['0.4','0.7'],['0.5','0.8'],['0.6','0.9'],['0.7','1'],['0.6','0.9'],['0.5','0.8']], j=0;
+	var change_size = function() {
+		j = (j+1)%sizes.length;
+		console.log(j);
+		elm.css('font-size', sizes[j][0]+'em');
+		elm.css('line-height', sizes[j][1]+'em');
+		setTimeout(change_size,500);
+	}
+	change_size();
 });
 </script>
 </body>
